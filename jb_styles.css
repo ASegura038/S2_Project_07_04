@@ -45,29 +45,19 @@ header img {
     width: 100%;
 }
 
-article {
-    float: left;
-    width: 55%;
-    background-color: rgb(239, 252, 247);
+dl dt {
+    background-color: rgb(236, 231, 155);
+    text-align: left;
+    font-weight: bold;
+
 }
 
-aside {
-    padding: 15px;
-    line-height: 20px;
-    float: left;
-    width: 45%;
-    background-color: rgb(239, 252, 247);
+dl dd {
+    margin-left: 28px;
 }
-
-footer {
-    background: rgb(36, 94, 133)
-}
-
-
 
 
 nav.horizontal {
-
     background-color: rgb(36, 94, 133);
     display: table;
     list-style: none;
@@ -78,6 +68,7 @@ nav.horizontal {
 nav.horizontal>ul {
     display: table-row;
     width: 100%;
+
 }
 
 nav.horizontal>ul>li {
@@ -88,17 +79,73 @@ nav.horizontal>ul>li {
 }
 
 nav.horizontal a {
-    color: rgb(179, 145, 84);
-    display: block;
+    display: initial;
 }
 
+
+/* ul.submenu {
+    display: none;
+} */
+
+a.submenuTitle:hover+ul.submenu,
+ul.submenu:hover {
+    display: block;
+}
 
 ul.submenu {
     display: none;
 }
 
-a.submenuTitle:hover+ul.submenu,
+ul.submenuTitle:hover+ul.submenu,
 ul.submenu:hover {
-    text-decoration-line: none;
     display: block;
+}
+
+nav.horizontal li:hover {
+    background-color: rgb(79, 129, 163);
+}
+
+ul.mainmenu>li {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+ul.submenu {
+    width: 100%;
+    position: absolute;
+    background-color: rgb(14, 76, 117);
+}
+
+article {
+    float: left;
+    width: 55%;
+    background-color: rgb(239, 252, 247);
+}
+
+aside {
+    background-color: rgba(230, 223, 130, 0.911);
+    padding: 15px;
+    line-height: 20px;
+    float: left;
+    width: 45%;
+}
+
+aside h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+footer {
+    background: rgb(36, 94, 133);
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
 }
